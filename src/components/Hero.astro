@@ -4,18 +4,19 @@ import { siteConfig } from "../config";
 
 <div
   id="hero"
-  class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
-  style={`--accent-color: ${siteConfig.accentColor}`}
+  class="relative isolate overflow-hidden py-24 md:h-screen"
+  style="background-color: var(--color-bg-primary); --accent-color: var(--color-accent)"
 >
   <!-- Gradient overlay -->
   <div
     class="absolute inset-0 -z-10"
-    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
+    id="hero-gradient"
   >
   </div>
   <svg
     aria-hidden="true"
-    class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    class="absolute inset-0 -z-10 size-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    style="stroke: var(--color-border-medium)"
   >
     <defs>
       <pattern
@@ -39,7 +40,7 @@ import { siteConfig } from "../config";
         <text
           x="50"
           y="50"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="24"
           transform="rotate(-15)">&lt;/&gt;</text
@@ -47,7 +48,7 @@ import { siteConfig } from "../config";
         <text
           x="150"
           y="100"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="20"
           transform="rotate(10)">{}</text
@@ -55,7 +56,7 @@ import { siteConfig } from "../config";
         <text
           x="250"
           y="80"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="18"
           transform="rotate(-5)">=&gt;</text
@@ -63,7 +64,7 @@ import { siteConfig } from "../config";
         <text
           x="100"
           y="200"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="22"
           transform="rotate(15)">[]</text
@@ -71,7 +72,7 @@ import { siteConfig } from "../config";
         <text
           x="300"
           y="180"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="20"
           transform="rotate(-10)">&lt;&gt;</text
@@ -79,7 +80,7 @@ import { siteConfig } from "../config";
         <text
           x="200"
           y="250"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="24"
           transform="rotate(5)">()</text
@@ -87,7 +88,7 @@ import { siteConfig } from "../config";
         <text
           x="50"
           y="320"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="18"
           transform="rotate(-8)">::</text
@@ -95,7 +96,7 @@ import { siteConfig } from "../config";
         <text
           x="350"
           y="300"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="22"
           transform="rotate(12)">==</text
@@ -103,7 +104,7 @@ import { siteConfig } from "../config";
         <text
           x="150"
           y="350"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="20"
           transform="rotate(-15)">++</text
@@ -111,7 +112,7 @@ import { siteConfig } from "../config";
         <text
           x="250"
           y="370"
-          fill={siteConfig.accentColor}
+          fill="var(--color-accent)"
           font-family="monospace"
           font-size="24"
           transform="rotate(8)">;</text
@@ -132,33 +133,49 @@ import { siteConfig } from "../config";
   <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
     <div>
       <h2
-        class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
+        class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight animate-fade-in"
+        style="color: var(--color-text-tertiary)"
       >
-        Hello! 👋
+        Hello there! 
       </h2>
       <h1
-        class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
+        class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight animate-fade-in animation-delay-200"
+        style="color: var(--color-text-secondary)"
       >
-        I'm <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
+        I'm <span style="color: var(--color-accent)">
+          {siteConfig.name}</span
         >
       </h1>
       <p
-        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
+        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium animate-fade-in animation-delay-400"
+        style="color: var(--color-text-muted)"
       >
         {siteConfig.title}
       </p>
+      <div class="pt-4 animate-fade-in animation-delay-600">
+          <div class="flex flex-wrap gap-3 animate-fade-in animation-delay-200">
+            {
+              siteConfig.skills.map((skill) => (
+                <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium" style="background-color: var(--color-text-primary); color: var(--color-bg-dark);">
+                  {skill}
+                </span>
+              ))
+            }
+          </div>
+        </div>
     </div>
   </div>
   <div
-    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 animate-fade-in animation-delay-600"
+    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 animate-fade-in animation-delay-600"
+    style="color: var(--color-text-tertiary)"
   >
     {
       siteConfig.social?.email && (
         <a
           href={`mailto:${siteConfig.social.email}`}
           aria-label="Email"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+          class="transition-colors duration-300"
+          style="color: inherit;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +203,8 @@ import { siteConfig } from "../config";
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+          class="transition-colors duration-300"
+          style="color: inherit;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -219,7 +237,8 @@ import { siteConfig } from "../config";
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Twitter"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+          class="transition-colors duration-300"
+          style="color: inherit;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +268,8 @@ import { siteConfig } from "../config";
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
+          class="transition-colors duration-300"
+          style="color: inherit;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='inherit'"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -275,6 +295,18 @@ import { siteConfig } from "../config";
 </div>
 
 <style>
+  #hero-gradient {
+    background: radial-gradient(
+      ellipse 800px 1200px at 0% 0%,
+      color-mix(in srgb, var(--color-accent) 25%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 15%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 6%, transparent) 40%,
+      color-mix(in srgb, var(--color-bg-primary) 30%, transparent) 70%,
+      color-mix(in srgb, var(--color-bg-primary) 80%, transparent) 90%,
+      var(--color-bg-primary) 100%
+    );
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;

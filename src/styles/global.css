@@ -1,5 +1,33 @@
 @import "tailwindcss";
 
+:root {
+	/* Accent/Brand Colors - Change these to customize your theme! */
+	--color-accent: #b8b8f3;
+	--color-accent-hover: #9a9ae0;
+	--color-accent-light: rgba(184, 184, 243, 0.1);
+
+	/* Text Colors */
+	--color-text-primary: #e2fadb;
+	--color-text-secondary: #daf4ca;
+	--color-text-tertiary: #e2fadb;
+	--color-text-muted: #bcc4ba;
+	--color-text-light: #f2ffeb;
+
+	/* Background Colors */
+	--color-bg-primary: #373e4d;
+	--color-bg-secondary: #384155;
+	--color-bg-tertiary: #727c91;
+	--color-bg-dark: #1e232e;
+
+	/* Border Colors */
+	--color-border-light: #f3f4f6;
+	--color-border-medium: #e5e7eb;
+	--color-border-dark: #d1d5db;
+
+	/* Special Elements */
+	--color-bullet: #9ca3af;
+}
+
 body {
-  font-family: 'IBM Plex Mono', monospace;
+	font-family: "IBM Plex Mono", monospace;
 }

@@ -14,8 +14,9 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
     <ul class="flex items-center gap-8 justify-center">
       <li>
         <a
-          href="#about"
-          class="text-gray-700 hover:text-black transition-colors font-medium"
+          href="#hero"
+          class="transition-colors font-medium"
+          style="color: var(--color-text-tertiary);" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-tertiary)'"
         >
           About
         </a>
@@ -25,7 +26,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <li>
             <a
               href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              class="transition-colors font-medium"
+              style="color: var(--color-text-tertiary);" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-tertiary)'"
             >
               Projects
             </a>
@@ -37,7 +39,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <li>
             <a
               href="#experience"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              class="transition-colors font-medium"
+              style="color: var(--color-text-tertiary);" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-tertiary)'"
             >
               Experience
             </a>
@@ -49,7 +52,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <li>
             <a
               href="#education"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              class="transition-colors font-medium"
+              style="color: var(--color-text-tertiary);" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-tertiary)'"
             >
               Education
             </a>
@@ -64,9 +68,9 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   window.addEventListener("scroll", () => {
     const header = document.getElementById("header");
     if (window.scrollY > 100) {
-      header?.classList.add("bg-white/80", "backdrop-blur-sm");
+      header?.classList.add("[#b8b8f3]/80", "backdrop-blur-sm");
     } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
+      header?.classList.remove("[#b8b8f3]/80", "backdrop-blur-sm");
     }
   });
 </script>
