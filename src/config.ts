@@ -27,7 +27,7 @@ export const siteConfig = {
 			name: "Singleplayer Chess",
 			description:
 				"Play chess against yourself! Built using React, Node.js, and TailwindCSS.",
-			link: "https://github.com/owenmeier/chess-game",
+			link: "https://chess-game-three-chi.vercel.app/",
 			skills: ["JavaScript", "React", "Node.js", "TailwindCSS"],
 		},
 		{

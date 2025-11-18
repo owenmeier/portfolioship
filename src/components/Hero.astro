@@ -152,21 +152,21 @@ import { siteConfig } from "../config";
       >
         {siteConfig.title}
       </p>
-      <div class="pt-4 animate-fade-in animation-delay-600">
-          <div class="flex flex-wrap gap-3 animate-fade-in animation-delay-200">
+      <div class="mt-6 sm:mt-8 md:mt-10 animate-fade-in animation-delay-600">
+          <div class="flex flex-wrap gap-2 sm:gap-3 animate-fade-in animation-delay-200">
             {
               siteConfig.skills.map((skill) => (
-                <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium" style="background-color: var(--color-text-primary); color: var(--color-bg-dark);">
+                <span class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium transition-all duration-300" style="background-color: var(--color-text-primary); color: var(--color-bg-dark);"
+                onmouseover="this.style.backgroundColor='var(--color-accent)'"
+                onmouseout="this.style.backgroundColor='var(--color-text-primary)'">
                   {skill}
                 </span>
               ))
             }
           </div>
         </div>
-    </div>
-  </div>
   <div
-    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 animate-fade-in animation-delay-600"
+    class="mt-6 sm:mt-8 md:mt-10 flex gap-x-4 sm:gap-x-6 md:gap-x-8 animate-fade-in animation-delay-600"
     style="color: var(--color-text-tertiary)"
   >
     {
