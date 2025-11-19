@@ -31,10 +31,11 @@ export const siteConfig = {
 			skills: ["JavaScript", "React", "Node.js", "TailwindCSS"],
 		},
 		{
-			name: "SplitTheBill",
-			description: "Coming Soon...",
-			link: "",
-			skills: [],
+			name: "PayBack",
+			description:
+				"A web application for easily splitting restaurant bills among multiple people using AI-powered receipt scanning.",
+			link: "https://payback-pi.vercel.app/",
+			skills: ["TypeScript", "React", "Node.js", "TailwindCSS", "Railway"],
 		},
 		{
 			name: "NASA Dashboard",
