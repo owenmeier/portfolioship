@@ -1,7 +1,7 @@
 export const siteConfig = {
 	name: "Owen Meier",
 	title: "Computer Science and Economics Student",
-	description: "Portfolio website of Ryan Fitzgerald",
+	description: "Portfolio website of Owen meier",
 	accentColor: "#B8B8F3",
 	social: {
 		email: "owen2717@gmail.com.com",
@@ -9,12 +9,12 @@ export const siteConfig = {
 		twitter: "",
 		github: "https://github.com/owenmeier",
 	},
-	aboutMe:
-		"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
+	aboutMe: "",
 	skills: [
 		"Java",
 		"C",
 		"Javascript",
+		"TypeScript",
 		"React",
 		"Node.js",
 		"Java",
@@ -72,7 +72,7 @@ export const siteConfig = {
 			degree: "Bachelor of Science in Computer Science",
 			dateRange: "2023 - 2027",
 			achievements: [
-				"Current GPA 3.189",
+				"Current GPA 3.2",
 				"Maintained above 3.0 in all STEM courses",
 			],
 		},
@@ -81,7 +81,7 @@ export const siteConfig = {
 			degree: "Bachelor of Science in Economics",
 			dateRange: "2023 - 2027",
 			achievements: [
-				"Current GPA 3.189",
+				"Current GPA 3.2",
 				"Maintained above 3.0 in all STEM courses",
 			],
 		},
